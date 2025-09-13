@@ -233,7 +233,7 @@
             <p>✉️ info@gs-forwarding.com</p>
             <p>📍 Адрес на фирмата: 231016 G. Stoilov</p>
         </div>
-        <form class="contact-form" action="mailto:info@gs-forwarding.com" method="POST" enctype="text/plain">
+        <form id="contactForm" class="contact-form" action="mailto:info@gs-forwarding.com" method="POST" enctype="text/plain">
             <label for="name">Име</label>
             <input type="text" id="name" name="Име" required>
             <label for="email">Имейл</label>
@@ -243,11 +243,29 @@
             <label for="message">Съобщение</label>
             <textarea id="message" name="Съобщение" required></textarea>
             <button type="submit">Изпрати</button>
+            <p id="successMessage" style="display:none; color:green; margin-top:1em;">✅ Успешно изпратено!</p>
         </form>
     </section>
 
     <footer>
         © 2025 Георги Стоилов Спедиция
     </footer>
+
+    <!-- JavaScript за показване на съобщението -->
+    <script>
+        const form = document.getElementById('contactForm');
+        const successMsg = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(event){
+            event.preventDefault(); // спира стандартното изпращане
+            successMsg.style.display = 'block'; // показва съобщението
+            form.reset(); // изчиства формата
+
+            // Скриване на съобщението след 3 секунди
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
