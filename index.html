@@ -1,271 +1,100 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Георги Стоилов Спедиция</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f6f6fb;
-            scroll-behavior: smooth;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: linear-gradient(90deg, #ff7eb3 0%, #6e8efb 100%);
-            color: #fff;
-            padding: 1em 2em;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 2em;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1581091012184-8ecf75c9c8bb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-            height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            flex-direction: column;
-            padding: 0 1em;
-        }
-        .hero h2 {
-            font-size: 3em;
-            margin: 0.5em 0;
-            text-shadow: 2px 2px 8px #000;
-        }
-        .hero p {
-            font-size: 1.3em;
-            max-width: 700px;
-            margin: 0 auto 1.5em;
-            text-shadow: 1px 1px 6px #000;
-        }
-        .btn-primary {
-            background: #3b82f6;
-            color: #fff;
-            padding: 0.7em 2em;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .btn-primary:hover {
-            background: #2563eb;
-        }
-        section {
-            padding: 5em 2em 3em 2em;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2em;
-            color: #2563eb;
-            margin-bottom: 1em;
-        }
-        .team-cards, .services-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5em;
-        }
-        .card {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            padding: 1.5em;
-            text-align: center;
-            max-width: 260px;
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 0.8em;
-        }
-        .card h4 {
-            color: #e94992;
-            margin: 0.5em 0 0.3em 0;
-        }
-        .card p {
-            color: #444;
-            font-size: 1em;
-        }
-        .contacts {
-            text-align: center;
-        }
-        .contacts p {
-            font-size: 1.1em;
-            margin: 0.5em 0;
-        }
-        .contact-form {
-            max-width: 500px;
-            margin: 2em auto;
-            background: #f8f8ff;
-            padding: 2em;
-            border-radius: 12px;
-            box-shadow: 0 2px 7px rgba(0,0,0,0.1);
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            margin-bottom: 1em;
-            padding: 0.6em;
-            border-radius: 6px;
-            border: 1px solid #b4b4e3;
-            font-size: 1em;
-            font-family: inherit;
-        }
-        .contact-form button {
-            background: #3b82f6;
-            color: #fff;
-            border: none;
-            border-radius: 7px;
-            padding: 0.7em 2em;
-            font-size: 1.1em;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .contact-form button:hover {
-            background: #2563eb;
-        }
-        footer {
-            background: #3b82f6;
-            color: #fff;
-            text-align: center;
-            padding: 1.5em 0;
-            margin-top: 2em;
-        }
-        @media (max-width: 900px){
-            .team-cards, .services-cards { flex-direction: column; align-items: center; }
-            header { flex-direction: column; gap: 1em; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Георги Стоилов Спедиция</title>
+<style>
+body {margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f6f6fb;scroll-behavior:smooth;}
+header {position:fixed;top:0;width:100%;background:linear-gradient(90deg,#ff7eb3 0%,#6e8efb 100%);color:#fff;padding:1em 2em;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
+header h1{margin:0;font-size:1.5em;}
+nav a{color:#fff;text-decoration:none;margin-left:2em;font-weight:bold;transition:0.3s;}
+nav a:hover{text-decoration:underline;}
+section{padding:6em 2em 3em 2em;text-align:center;}
+.hero{background:url('https://images.unsplash.com/photo-1581091012184-8ecf75c9c8bb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;height:90vh;color:#fff;display:flex;justify-content:center;align-items:center;flex-direction:column;text-shadow:1px 1px 6px #000;}
+.btn-primary{background:#3b82f6;color:#fff;padding:0.7em 2em;border-radius:8px;text-decoration:none;font-weight:bold;transition:0.3s;}
+.btn-primary:hover{background:#2563eb;}
+.team-cards,.services-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5em;margin-top:2em;}
+.card{background:#fff;border-radius:12px;padding:1.5em;text-align:center;max-width:260px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.card img{width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:0.8em;}
+.card h4{color:#e94992;margin:0.5em 0 0.3em 0;}
+.card p{color:#444;font-size:1em;}
+.contact-form{max-width:500px;margin:2em auto;background:#f8f8ff;padding:2em;border-radius:12px;box-shadow:0 2px 7px rgba(0,0,0,0.1);}
+.contact-form input,.contact-form textarea{width:100%;margin-bottom:1em;padding:0.6em;border-radius:6px;border:1px solid #b4b4e3;font-size:1em;font-family:inherit;}
+.contact-form button{background:#3b82f6;color:#fff;border:none;border-radius:7px;padding:0.7em 2em;font-size:1.1em;cursor:pointer;font-weight:bold;}
+.contact-form button:hover{background:#2563eb;}
+footer{background:#3b82f6;color:#fff;text-align:center;padding:1.5em 0;margin-top:2em;}
+@media(max-width:900px){.team-cards,.services-cards{flex-direction:column;align-items:center;}header{flex-direction:column;gap:1em;}}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Георги Стоилов Спедиция</h1>
-        <nav>
-            <a href="#hero">Начало</a>
-            <a href="#services">Услуги</a>
-            <a href="#team">Екип</a>
-            <a href="#contacts">Контакти</a>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <h2>Вашият надежден партньор в транспорта</h2>
-        <p>Предлагаме ефективни решения по суша, въздух, море и железница.</p>
-        <a href="#contacts" class="btn-primary">Свържете се с нас</a>
-    </section>
+<header>
+<h1>Георги Стоилов Спедиция</h1>
+<nav>
+<a href="#hero">Начало</a>
+<a href="#about">За нас</a>
+<a href="#services">Услуги</a>
+<a href="#contact">Контакти</a>
+</nav>
+</header>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2 class="section-title">Нашите услуги</h2>
-        <div class="services-cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1581090700227-f369a8b46e2c?auto=format&fit=crop&w=80&q=80" alt="Road Transport">
-                <h4>Сухопътен транспорт</h4>
-                <p>Надежден превоз на товари с камиони и автомобилен транспорт в страната и чужбина.</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1578496473423-994e2eab7fa6?auto=format&fit=crop&w=80&q=80" alt="Air Freight">
-                <h4>Въздушен транспорт</h4>
-                <p>Бързи и сигурни решения за международни и експресни доставки.</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1581091012184-8ecf75c9c8bb?auto=format&fit=crop&w=80&q=80" alt="Sea Freight">
-                <h4>Морски транспорт</h4>
-                <p>Контейнерни и големи товари с опитни партньори и контрол на логистиката.</p>
-            </div>
-        </div>
-    </section>
+<!-- Начало -->
+<section class="hero" id="hero">
+<h2>Добре дошли в нашата спедиторска фирма</h2>
+<p>Надеждни и ефективни транспортни решения по суша, въздух, море и железница.</p>
+<a href="#contact" class="btn-primary">Свържете се с нас</a>
+</section>
 
-    <!-- Team Section -->
-    <section id="team">
-        <h2 class="section-title">Нашият екип</h2>
-        <div class="team-cards">
-            <div class="card">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="General Manager">
-                <h4>General Manager</h4>
-                <p>15 години опит в международната спедиция и управление на логистика.</p>
-            </div>
-            <div class="card">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Seafreight Manager">
-                <h4>Seafreight Manager</h4>
-                <p>12 години опит в морски превози и контейнерна логистика.</p>
-            </div>
-            <div class="card">
-                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Road Manager">
-                <h4>Road Manager</h4>
-                <p>13 години опит в автомобилния транспорт и гружански услуги.</p>
-            </div>
-        </div>
-    </section>
+<!-- За нас / Екип -->
+<section id="about">
+<h2>Нашият екип</h2>
+<div class="team-cards">
+<div class="card"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="General Manager"><h4>General Manager</h4><p>15 години опит в международната спедиция.</p></div>
+<div class="card"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Seafreight Manager"><h4>Seafreight Manager</h4><p>12 години опит в морски превози и контейнерна логистика.</p></div>
+<div class="card"><img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Road Manager"><h4>Road Manager</h4><p>13 години опит в автомобилния транспорт и гружански услуги.</p></div>
+</div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contacts">
-        <h2 class="section-title">Контакти</h2>
-        <div class="contacts">
-            <p>📞 +359 889 999 999</p>
-            <p>✉️ info@gs-forwarding.com</p>
-            <p>📍 Адрес на фирмата: 231016 G. Stoilov</p>
-        </div>
-        <form id="contactForm" class="contact-form">
-            <label for="name">Име</label>
-            <input type="text" id="name" name="Име" required>
-            <label for="email">Имейл</label>
-            <input type="email" id="email" name="Имейл" required>
-            <label for="phone">Телефон</label>
-            <input type="tel" id="phone" name="Телефон">
-            <label for="message">Съобщение</label>
-            <textarea id="message" name="Съобщение" required></textarea>
-            <button type="submit">Изпрати</button>
-            <p id="successMessage" style="display:none; color:green; margin-top:1em;">✅ Успешно изпратено!</p>
-        </form>
-    </section>
+<!-- Услуги -->
+<section id="services">
+<h2>Нашите услуги</h2>
+<div class="services-cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1581090700227-f369a8b46e2c?auto=format&fit=crop&w=80&q=80" alt="Road Transport"><h4>Сухопътен транспорт</h4><p>Надежден превоз на товари с камиони и автомобилен транспорт.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1578496473423-994e2eab7fa6?auto=format&fit=crop&w=80&q=80" alt="Air Freight"><h4>Въздушен транспорт</h4><p>Бързи и сигурни международни и експресни доставки.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1581091012184-8ecf75c9c8bb?auto=format&fit=crop&w=80&q=80" alt="Sea Freight"><h4>Морски транспорт</h4><p>Контейнерни и големи товари с опитни партньори.</p></div>
+</div>
+</section>
 
-    <footer>
-        © 2025 Георги Стоилов Спедиция
-    </footer>
+<!-- Контакти -->
+<section id="contact">
+<h2>Контакти</h2>
+<div class="contacts">
+<p>📞 +359 889 999 999</p>
+<p>✉️ info@gs-forwarding.com</p>
+<p>📍 Адрес на фирмата: 231016 G. Stoilov</p>
+</div>
+<form id="contactForm" class="contact-form">
+<label for="name">Име</label>
+<input type="text" id="name" name="Име" required>
+<label for="email">Имейл</label>
+<input type="email" id="email" name="Имейл" required>
+<label for="phone">Телефон</label>
+<input type="tel" id="phone" name="Телефон">
+<label for="message">Съобщение</label>
+<textarea id="message" name="Съобщение" required></textarea>
+<button type="submit">Изпрати</button>
+<p id="successMessage" style="display:none;color:green;margin-top:1em;">✅ Успешно изпратено!</p>
+</form>
+</section>
 
-    <!-- JavaScript за автоматично съобщение -->
-    <script>
-        const form = document.getElementById('contactForm');
-        const successMsg = document.getElementById('successMessage');
+<footer>© 2025 Георги Стоилов Спедиция</footer>
 
-        form.addEventListener('submit', function(event){
-            event.preventDefault(); // спира стандартното изпращане
-            successMsg.style.display = 'block'; // показва съобщението
-            form.reset(); // изчиства формата
+<script>
+const form=document.getElementById('contactForm');
+const successMsg=document.getElementById('successMessage');
+form.addEventListener('submit',function(e){e.preventDefault();successMsg.style.display='block';form.reset();setTimeout(()=>{successMsg.style.display='none';},3000);});
+</script>
 
-            // Скриване на съобщението след 3 секунди
-            setTimeout(() => {
-                successMsg.style.display = 'none';
-            }, 3000);
-        });
-    </script>
 </body>
 </html>
