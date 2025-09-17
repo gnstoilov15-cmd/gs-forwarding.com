@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GNS FORWARDING 231016</title>
+<meta name="description" content="GNS Forwarding - надеждни решения в сушопътен, въздушен и морски транспорт. Контакти и услуги.">
 <style>
 body {margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f6f6fb;scroll-behavior:smooth;}
 header {position:fixed;top:0;width:100%;background:linear-gradient(90deg,#ff7eb3 0%,#6e8efb 100%);color:#fff;padding:1em 2em;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
@@ -12,7 +13,6 @@ nav a{color:#fff;text-decoration:none;margin-left:2em;font-weight:bold;transitio
 nav a:hover{text-decoration:underline;}
 .language-switch{background:#fff;color:#2563eb;border:none;border-radius:6px;padding:0.3em 0.8em;font-weight:bold;cursor:pointer;margin-left:1em;}
 section{padding:6em 2em 3em 2em;text-align:center;}
-/* HERO - сменен фон за спедиция/логистика */
 .hero{background:url('https://images.unsplash.com/photo-1508610048659-a06c1a0c6d06?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;height:90vh;color:#fff;display:flex;justify-content:center;align-items:center;flex-direction:column;text-shadow:1px 1px 6px #000;position:relative;}
 .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.35);z-index:0;}
 .hero > *{position:relative;z-index:1;}
@@ -23,7 +23,7 @@ section{padding:6em 2em 3em 2em;text-align:center;}
 .team-cards,.services-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5em;margin-top:2em;}
 .card{background:#fff;border-radius:12px;padding:1.5em;text-align:center;max-width:260px;box-shadow:0 2px 12px rgba(0,0,0,0.1);transition:transform 0.2s;}
 .card:hover{transform:translateY(-5px);}
-.card img{width:100px;height:100px;border-radius:8px;object-fit:cover;margin-bottom:0.8em;border:3px solid #e94992;}
+.card img{width:100%;height:150px;border-radius:8px;object-fit:cover;margin-bottom:0.8em;border:2px solid #e94992;}
 .card h4{color:#e94992;margin:0.5em 0 0.3em 0;}
 .card p{color:#444;font-size:1em;}
 .contact-form{max-width:500px;margin:2em auto;background:#f8f8ff;padding:2em;border-radius:12px;box-shadow:0 2px 7px rgba(0,0,0,0.1);}
@@ -39,149 +39,123 @@ footer{background:#3b82f6;color:#fff;text-align:center;padding:1.5em 0;margin-to
 <body>
 
 <header>
-<h1>GNS FORWARDING 231016</h1>
-<div>
-<nav>
-<a href="#hero">Начало</a>
-<a href="#about">За нас</a>
-<a href="#services">Услуги</a>
-<a href="#contact">Контакти</a>
-</nav>
-<button class="language-switch" id="langSwitch">EN</button>
-</div>
+  <h1>GNS FORWARDING 231016</h1>
+  <div>
+    <nav>
+      <a href="#hero">Начало</a>
+      <a href="#about">За нас</a>
+      <a href="#services">Услуги</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <button class="language-switch" id="langSwitch">EN</button>
+  </div>
 </header>
 
 <!-- Начало -->
 <section class="hero lang-bg" id="hero">
-<h2>Вашият надежден партньор в транспорта</h2>
-<p>Ефективни решения по суша, въздух, море и железница. Надеждност и професионализъм.</p>
-<a href="#contact" class="btn-primary">Свържете се с нас</a>
+  <h2>Вашият надежден партньор в транспорта</h2>
+  <p>Ефективни решения по суша, въздух, море и железница. Надеждност и професионализъм.</p>
+  <a href="#contact" class="btn-primary">Свържете се с нас</a>
 </section>
 
 <section class="hero lang-en hidden" id="hero-en">
-<h2>Your Reliable Transport Partner</h2>
-<p>Efficient solutions by land, air, sea, and rail. Reliability and professionalism.</p>
-<a href="#contact" class="btn-primary">Contact Us</a>
+  <h2>Your Reliable Transport Partner</h2>
+  <p>Efficient solutions by land, air, sea, and rail. Reliability and professionalism.</p>
+  <a href="#contact" class="btn-primary">Contact Us</a>
 </section>
 
 <!-- За нас / Екип -->
 <section id="about">
-<h2 class="lang-bg">Нашият екип</h2>
-<h2 class="lang-en hidden">Our Team</h2>
-<div class="team-cards">
-<!-- General Manager -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="General Manager">
-<h4 class="lang-bg">General Manager</h4>
-<h4 class="lang-en hidden">General Manager</h4>
-<p class="lang-bg">15 години опит в международната спедиция.</p>
-<p class="lang-en hidden">15 years of experience in international forwarding.</p>
-<p>✉️ <a href="mailto:gm@gs-forwarding.com">gm@gs-forwarding.com</a></p>
-<p>📞 +359 888 111 111</p>
-</div>
-<!-- Airfreight Manager -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Airfreight Manager">
-<h4 class="lang-bg">Airfreight Manager</h4>
-<h4 class="lang-en hidden">Airfreight Manager</h4>
-<p class="lang-bg">10 години опит във въздушния транспорт и експресни доставки.</p>
-<p class="lang-en hidden">10 years experience in air freight and express deliveries.</p>
-<p>✉️ <a href="mailto:air@gs-forwarding.com">air@gs-forwarding.com</a></p>
-<p>📞 +359 888 222 222</p>
-</div>
-<!-- Seafreight Manager -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Seafreight Manager">
-<h4 class="lang-bg">Seafreight Manager</h4>
-<h4 class="lang-en hidden">Seafreight Manager</h4>
-<p class="lang-bg">12 години опит в морски превози и контейнерна логистика.</p>
-<p class="lang-en hidden">12 years experience in sea freight and container logistics.</p>
-<p>✉️ <a href="mailto:sea@gs-forwarding.com">sea@gs-forwarding.com</a></p>
-<p>📞 +359 888 333 333</p>
-</div>
-<!-- Road Manager -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Road Manager">
-<h4 class="lang-bg">Road Manager</h4>
-<h4 class="lang-en hidden">Road Manager</h4>
-<p class="lang-bg">13 години опит в автомобилния транспорт и гружански услуги.</p>
-<p class="lang-en hidden">13 years experience in road transport and cargo services.</p>
-<p>✉️ <a href="mailto:road@gs-forwarding.com">road@gs-forwarding.com</a></p>
-<p>📞 +359 888 444 444</p>
-</div>
-<!-- Chief Accountant -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Chief Accountant">
-<h4 class="lang-bg">Главен Счетоводител</h4>
-<h4 class="lang-en hidden">Chief Accountant</h4>
-<p class="lang-bg">10 години опит във финансовото управление на спедиторски компании.</p>
-<p class="lang-en hidden">10 years experience in financial management of forwarding companies.</p>
-<p>✉️ <a href="mailto:accounting@gs-forwarding.com">accounting@gs-forwarding.com</a></p>
-<p>📞 +359 888 555 555</p>
-</div>
-</div>
+  <h2 class="lang-bg">Нашият екип</h2>
+  <h2 class="lang-en hidden">Our Team</h2>
+  <div class="team-cards">
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="General Manager">
+      <h4 class="lang-bg">Генерален Мениджър</h4>
+      <h4 class="lang-en hidden">General Manager</h4>
+      <p class="lang-bg">15 години опит в международната спедиция.</p>
+      <p class="lang-en hidden">15 years of experience in international forwarding.</p>
+      <p>✉️ <a href="mailto:gm@gs-forwarding.com">gm@gs-forwarding.com</a></p>
+      <p>📞 +359 888 111 111</p>
+    </div>
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Airfreight Manager">
+      <h4 class="lang-bg">Въздушен Мениджър</h4>
+      <h4 class="lang-en hidden">Airfreight Manager</h4>
+      <p class="lang-bg">10 години опит във въздушния транспорт и експресни доставки.</p>
+      <p class="lang-en hidden">10 years experience in air freight and express deliveries.</p>
+      <p>✉️ <a href="mailto:air@gs-forwarding.com">air@gs-forwarding.com</a></p>
+      <p>📞 +359 888 222 222</p>
+    </div>
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Seafreight Manager">
+      <h4 class="lang-bg">Морски Мениджър</h4>
+      <h4 class="lang-en hidden">Seafreight Manager</h4>
+      <p class="lang-bg">12 години опит в морски превози и контейнерна логистика.</p>
+      <p class="lang-en hidden">12 years experience in sea freight and container logistics.</p>
+      <p>✉️ <a href="mailto:sea@gs-forwarding.com">sea@gs-forwarding.com</a></p>
+      <p>📞 +359 888 333 333</p>
+    </div>
+  </div>
 </section>
 
 <!-- Услуги -->
 <section id="services">
-<h2 class="lang-bg">Нашите услуги</h2>
-<h2 class="lang-en hidden">Our Services</h2>
-<div class="services-cards">
-<div class="card">
-<!-- road photo -->
-<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80" alt="Road Transport">
-<h4 class="lang-bg">Сухопътен транспорт</h4>
-<h4 class="lang-en hidden">Road Transport</h4>
-<p class="lang-bg">Надежден превоз на товари с камиони и автомобилен транспорт.</p>
-<p class="lang-en hidden">Reliable transport of goods by trucks and vehicles.</p>
-</div>
-<div class="card">
-<!-- air photo -->
-<img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=400&q=80" alt="Air Freight">
-<h4 class="lang-bg">Въздушен транспорт</h4>
-<h4 class="lang-en hidden">Air Freight</h4>
-<p class="lang-bg">Бързи и сигурни международни и експресни доставки.</p>
-<p class="lang-en hidden">Fast and secure international and express deliveries.</p>
-</div>
-<div class="card">
-<!-- sea photo -->
-<img src="https://images.unsplash.com/photo-1518105779142-d975f22f1d66?auto=format&fit=crop&w=400&q=80" alt="Sea Freight">
-<h4 class="lang-bg">Морски транспорт</h4>
-<h4 class="lang-en hidden">Sea Freight</h4>
-<p class="lang-bg">Контейнерни и големи товари с опитни партньори.</p>
-<p class="lang-en hidden">Container and large cargo with experienced partners.</p>
-</div>
-</div>
+  <h2 class="lang-bg">Нашите услуги</h2>
+  <h2 class="lang-en hidden">Our Services</h2>
+  <div class="services-cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80" alt="Road Transport">
+      <h4 class="lang-bg">Сухопътен транспорт</h4>
+      <h4 class="lang-en hidden">Road Transport</h4>
+      <p class="lang-bg">Надежден превоз на товари с камиони и автомобилен транспорт.</p>
+      <p class="lang-en hidden">Reliable transport of goods by trucks and vehicles.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=400&q=80" alt="Air Freight">
+      <h4 class="lang-bg">Въздушен транспорт</h4>
+      <h4 class="lang-en hidden">Air Freight</h4>
+      <p class="lang-bg">Бързи и сигурни международни и експресни доставки.</p>
+      <p class="lang-en hidden">Fast and secure international and express deliveries.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091012184-8ecf75c9c8bb?auto=format&fit=crop&w=400&q=80" alt="Sea Freight">
+      <h4 class="lang-bg">Морски транспорт</h4>
+      <h4 class="lang-en hidden">Sea Freight</h4>
+      <p class="lang-bg">Контейнерни и големи товари с опитни партньори.</p>
+      <p class="lang-en hidden">Container and large cargo with experienced partners.</p>
+    </div>
+  </div>
 </section>
 
 <!-- Контакти -->
 <section id="contact">
-<h2 class="lang-bg">Контакти</h2>
-<h2 class="lang-en hidden">Contacts</h2>
-<div class="contacts">
-<p>📞 +359 889 999 999</p>
-<p>✉️ info@gs-forwarding.com</p>
-<p>📍 Адрес на фирмата: 231016 G. Stoilov</p>
-</div>
-<form id="contactForm" class="contact-form">
-<label class="lang-bg" for="name">Име</label>
-<label class="lang-en hidden" for="name">Name</label>
-<input type="text" id="name" name="Име" required>
-<label class="lang-bg" for="email">Имейл</label>
-<label class="lang-en hidden" for="email">Email</label>
-<input type="email" id="email" name="Имейл" required>
-<label class="lang-bg" for="phone">Телефон</label>
-<label class="lang-en hidden" for="phone">Phone</label>
-<input type="tel" id="phone" name="Телефон">
-<label class="lang-bg" for="message">Съобщение</label>
-<label class="lang-en hidden" for="message">Message</label>
-<textarea id="message" name="Съобщение" required></textarea>
-<button type="submit">Изпрати</button>
-<p id="successMessage" style="display:none;color:green;margin-top:1em;">✅ <span class="lang-bg">Успешно изпратено!</span><span class="lang-en hidden">Successfully sent!</span></p>
-</form>
+  <h2 class="lang-bg">Контакти</h2>
+  <h2 class="lang-en hidden">Contacts</h2>
+  <div class="contacts">
+    <p>📞 +359 889 999 999</p>
+    <p>✉️ info@gs-forwarding.com</p>
+    <p>📍 Адрес на фирмата: 231016 G. Stoilov</p>
+  </div>
+  <form id="contactForm" class="contact-form">
+    <label class="lang-bg" for="name">Име</label>
+    <label class="lang-en hidden" for="name">Name</label>
+    <input type="text" id="name" name="Име" required>
+    <label class="lang-bg" for="email">Имейл</label>
+    <label class="lang-en hidden" for="email">Email</label>
+    <input type="email" id="email" name="Имейл" required>
+    <label class="lang-bg" for="phone">Телефон</label>
+    <label class="lang-en hidden" for="phone">Phone</label>
+    <input type="tel" id="phone" name="Телефон">
+    <label class="lang-bg" for="message">Съобщение</label>
+    <label class="lang-en hidden" for="message">Message</label>
+    <textarea id="message" name="Съобщение" required></textarea>
+    <button type="submit">Изпрати</button>
+    <p id="successMessage" style="display:none;color:green;margin-top:1em;">✅ <span class="lang-bg">Успешно изпратено!</span><span class="lang-en hidden">Successfully sent!</span></p>
+  </form>
 </section>
 
-<footer>© 2025 Георги Стоилов Спедиция</footer>
+<footer>© 2025 GNS Forwarding</footer>
 
 <script>
 // Смена на езика
