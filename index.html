@@ -79,7 +79,8 @@
   .cards{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1.2rem}
   .card{background:var(--card);border-radius:12px;padding:1.25rem;text-align:left;max-width:300px;box-shadow:0 6px 20px rgba(15,23,36,0.06);transition:transform .18s}
   .card:hover{transform:translateY(-6px)}
-  .card img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--accent1);display:block;margin-bottom:.6rem}
+  .card .icon{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:.6rem;background:linear-gradient(180deg,#fff,#f3f4f6);border:3px solid var(--accent1)}
+  .card svg{width:44px;height:44px;display:block}
   .card h4{margin:.35rem 0;color:var(--accent1);font-size:1rem}
   .card p{margin:0;font-size:.95rem;color:#374151}
 
@@ -194,25 +195,51 @@
     <h2 class="lang-en hidden">Our Services</h2>
 
     <div class="cards services-cards" aria-hidden="false">
+      <!-- REPLACED: Inline SVG icons instead of external img links -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1581090700227-f369a8b46e2c?auto=format&fit=crop&w=80&q=80" alt="Road transport icon" />
+        <div class="icon" aria-hidden="true">
+          <!-- Truck SVG -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="truckTitle">
+            <title id="truckTitle">Truck</title>
+            <path d="M3 7h11v6h-1.5a2.5 2.5 0 0 0-5 0H3V7z" fill="#111827" opacity="0.08"/>
+            <path d="M16 11h2l2 3v3h-1a2 2 0 1 1-4 0h-6a2 2 0 1 1-4 0H3v-6a2 2 0 0 1 2-2h11z" fill="#0f1724"/>
+            <circle cx="7.5" cy="18.5" r="1.5" fill="#fff"/>
+            <circle cx="18" cy="18.5" r="1.5" fill="#fff"/>
+          </svg>
+        </div>
         <h4 class="lang-bg">Сухопътен транспорт</h4>
         <h4 class="lang-en hidden">Road Transport</h4>
         <p class="lang-bg">Надежден превоз на товари с камиони и автомобилен транспорт.</p>
+        <p class="lang-en hidden">Reliable transport of goods by trucks and vehicles.</p>
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1578496473423-994e2eab7fa6?auto=format&fit=crop&w=80&q=80" alt="Air freight icon" />
+        <div class="icon" aria-hidden="true">
+          <!-- Airplane SVG -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="planeTitle">
+            <title id="planeTitle">Airplane</title>
+            <path d="M2 16c0 .55.45 1 1 1h3l3 3v-3l6-2 4 1V11l-4 1-6-2V7L6 9H3c-.55 0-1 .45-1 1v6z" fill="#0f1724"/>
+          </svg>
+        </div>
         <h4 class="lang-bg">Въздушен транспорт</h4>
         <h4 class="lang-en hidden">Air Freight</h4>
         <p class="lang-bg">Бързи и сигурни международни и експресни доставки.</p>
+        <p class="lang-en hidden">Fast and secure international and express deliveries.</p>
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091012184-8ecf75c9c8bb?auto=format&fit=crop&w=80&q=80" alt="Sea freight icon" />
+        <div class="icon" aria-hidden="true">
+          <!-- Ship SVG -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="shipTitle">
+            <title id="shipTitle">Ship</title>
+            <path d="M3 12l9 4 9-4v5a1 1 0 0 1-1 1h-16a1 1 0 0 1-1-1v-5z" fill="#0f1724"/>
+            <path d="M7 8h10v2H7V8z" fill="#fff" opacity="0.9"/>
+          </svg>
+        </div>
         <h4 class="lang-bg">Морски транспорт</h4>
         <h4 class="lang-en hidden">Sea Freight</h4>
         <p class="lang-bg">Контейнерни и големи товари с опитни партньори.</p>
+        <p class="lang-en hidden">Container and large cargo with experienced partners.</p>
       </div>
     </div>
 
