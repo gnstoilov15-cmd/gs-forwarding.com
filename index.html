@@ -7,11 +7,12 @@
 <meta name="description" content="GNS Forwarding - надеждни решения в сушопътен, въздушен и морски транспорт. Контакти и услуги.">
 <style>
 body {margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f6f6fb;scroll-behavior:smooth;}
-header {position:fixed;top:0;width:100%;background:linear-gradient(90deg,#ff7eb3 0%,#6e8efb 100%);color:#fff;padding:1em 2em;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
+header {position:fixed;top:0;width:100%;background:linear-gradient(90deg,#ff7eb3 0%,#6e8efb 100%);color:#fff;padding:1em 2em;z-index:1000;display:flex;justify-content:center;align-items:center;gap:2em;}
 header h1{margin:0;font-size:1.5em;}
-nav a{color:#fff;text-decoration:none;margin-left:2em;font-weight:bold;transition:0.3s;}
+nav {display:flex;gap:2em;}
+nav a{color:#fff;text-decoration:none;font-weight:bold;transition:0.3s;}
 nav a:hover{text-decoration:underline;}
-.language-switch{background:#fff;color:#2563eb;border:none;border-radius:6px;padding:0.3em 0.8em;font-weight:bold;cursor:pointer;margin-left:1em;}
+.language-switch{background:#fff;color:#2563eb;border:none;border-radius:6px;padding:0.3em 0.8em;font-weight:bold;cursor:pointer;}
 section{padding:6em 2em 3em 2em;text-align:center;}
 .hero{background:url('https://images.unsplash.com/photo-1508610048659-a06c1a0c6d06?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;height:90vh;color:#fff;display:flex;justify-content:center;align-items:center;flex-direction:column;text-shadow:1px 1px 6px #000;position:relative;}
 .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.35);z-index:0;}
@@ -40,15 +41,14 @@ footer{background:#3b82f6;color:#fff;text-align:center;padding:1.5em 0;margin-to
 
 <header>
   <h1>GNS FORWARDING 231016</h1>
-  <div>
-    <nav>
+  <nav>
      <a href="#hero">Начало</a>
-     <a href="#about">За нас</a>
+     <a href="#history">История</a>
+     <a href="#about">Екип</a>
      <a href="#services">Услуги</a>
      <a href="#contact">Контакти</a>
-    </nav>
-    <button class="language-switch" id="langSwitch">EN</button>
-  </div>
+  </nav>
+  <button class="language-switch" id="langSwitch">EN</button>
 </header>
 
 <!-- Начало -->
@@ -64,7 +64,7 @@ footer{background:#3b82f6;color:#fff;text-align:center;padding:1.5em 0;margin-to
   <a href="#contact" class="btn-primary">Contact Us</a>
 </section>
 
-<!-- За нас / Екип -->
+<!-- История -->
 <section id="history">
   <h2 class="lang-bg">История на фирмата</h2>
   <h2 class="lang-en hidden">Company History</h2>
@@ -75,6 +75,8 @@ footer{background:#3b82f6;color:#fff;text-align:center;padding:1.5em 0;margin-to
     Founded in 2005, GNS Forwarding started as a small forwarding company with a vision to provide reliable and fast international transport solutions. Today, the company has global partners and offers land, air, sea, and rail transport, building trust with clients through professionalism and innovation.
   </p>
 </section>
+
+<!-- Екип -->
 <section id="about">
   <h2 class="lang-bg">Нашият екип</h2>
   <h2 class="lang-en hidden">Our Team</h2>
@@ -106,16 +108,15 @@ footer{background:#3b82f6;color:#fff;text-align:center;padding:1.5em 0;margin-to
       <p>✉️ <a href="mailto:sea@gs-forwarding.com">sea@gs-forwarding.com</a></p>
       <p>📞 +359 888 333 333</p>
     </div>
-    <!-- Road Manager -->
-<div class="card">
-  <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Road Manager">
-  <h4 class="lang-bg">Мениджър сухопътен трансропт</h4>
-  <h4 class="lang-en hidden">Road Manager</h4>
-  <p class="lang-bg">13 години опит в автомобилния транспорт и гружански услуги.</p>
-  <p class="lang-en hidden">13 years experience in road transport and cargo services.</p>
-  <p>✉️ <a href="mailto:road@gs-forwarding.com">road@gs-forwarding.com</a></p>
-  <p>📞 +359 888 444 444</p>
-</div>
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Road Manager">
+      <h4 class="lang-bg">Мениджър сухопътен транспорт</h4>
+      <h4 class="lang-en hidden">Road Manager</h4>
+      <p class="lang-bg">13 години опит в автомобилния транспорт и гружански услуги.</p>
+      <p class="lang-en hidden">13 years experience in road transport and cargo services.</p>
+      <p>✉️ <a href="mailto:road@gs-forwarding.com">road@gs-forwarding.com</a></p>
+      <p>📞 +359 888 444 444</p>
+    </div>
   </div>
 </section>
 
@@ -124,38 +125,35 @@ footer{background:#3b82f6;color:#fff;text-align:center;padding:1.5em 0;margin-to
   <h2 class="lang-bg">Нашите услуги</h2>
   <h2 class="lang-en hidden">Our Services</h2>
   <div class="services-cards">
-  <div class="card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMQHeUDYkbci0jgymUeruzpsH6eCYmxr0oF0MA-hWrCg&s=10" alt="Road Transport">
-    <h4 class="lang-bg">Сухопътен транспорт</h4>
-    <h4 class="lang-en hidden">Road Transport</h4>
-    <p class="lang-bg">Надежден превоз на товари с камиони и автомобилен транспорт.</p>
-    <p class="lang-en hidden">Reliable transport of goods by trucks and vehicles.</p>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMQHeUDYkbci0jgymUeruzpsH6eCYmxr0oF0MA-hWrCg&s=10" alt="Road Transport">
+      <h4 class="lang-bg">Сухопътен транспорт</h4>
+      <h4 class="lang-en hidden">Road Transport</h4>
+      <p class="lang-bg">Надежден превоз на товари с камиони и автомобилен транспорт.</p>
+      <p class="lang-en hidden">Reliable transport of goods by trucks and vehicles.</p>
+    </div>
+    <div class="card">
+      <img src="https://despred.com/wp-content/uploads/2023/12/predimstva-na-vazdushnia-transport-sofia-1.jpg" alt="Air Freight">
+      <h4 class="lang-bg">Въздушен транспорт</h4>
+      <h4 class="lang-en hidden">Air Freight</h4>
+      <p class="lang-bg">Бързи и сигурни международни и експресни доставки.</p>
+      <p class="lang-en hidden">Fast and secure international and express deliveries.</p>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_qor_qKSHRkrvVako-wZ8P2BNWjQ4uAM3iQ1u0oPI6g&s=10" alt="Sea Freight">
+      <h4 class="lang-bg">Морски транспорт</h4>
+      <h4 class="lang-en hidden">Sea Freight</h4>
+      <p class="lang-bg">Контейнерни и големи товари с опитни партньори.</p>
+      <p class="lang-en hidden">Container and large cargo with experienced partners.</p>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8cJz1Eh_c8pxfEqaZrFMAWMRxguTaupBmX8qNrlQqBQ&s=10" alt="Rail Transport">
+      <h4 class="lang-bg">Железопътен транспорт</h4>
+      <h4 class="lang-en hidden">Rail Transport</h4>
+      <p class="lang-bg">Ефективен превоз на товари чрез железопътната мрежа.</p>
+      <p class="lang-en hidden">Efficient cargo transport via rail network.</p>
+    </div>
   </div>
-
-  <div class="card">
-    <img src="https://despred.com/wp-content/uploads/2023/12/predimstva-na-vazdushnia-transport-sofia-1.jpg" alt="Air Freight">
-    <h4 class="lang-bg">Въздушен транспорт</h4>
-    <h4 class="lang-en hidden">Air Freight</h4>
-    <p class="lang-bg">Бързи и сигурни международни и експресни доставки.</p>
-    <p class="lang-en hidden">Fast and secure international and express deliveries.</p>
-  </div>
-
-  <div class="card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_qor_qKSHRkrvVako-wZ8P2BNWjQ4uAM3iQ1u0oPI6g&s=10" alt="Sea Freight">
-    <h4 class="lang-bg">Морски транспорт</h4>
-    <h4 class="lang-en hidden">Sea Freight</h4>
-    <p class="lang-bg">Контейнерни и големи товари с опитни партньори.</p>
-    <p class="lang-en hidden">Container and large cargo with experienced partners.</p>
-  </div>
-
-  <div class="card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8cJz1Eh_c8pxfEqaZrFMAWMRxguTaupBmX8qNrlQqBQ&s=10" alt="Rail Transport">
-    <h4 class="lang-bg">Железопътен транспорт</h4>
-    <h4 class="lang-en hidden">Rail Transport</h4>
-    <p class="lang-bg">Ефективен превоз на товари чрез железопътната мрежа.</p>
-    <p class="lang-en hidden">Efficient cargo transport via rail network.</p>
-  </div>
-</div>
 </section>
 
 <!-- Контакти -->
