@@ -1,200 +1,342 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>GNS FORWARDING 231016</title>
+<meta name="description" content="GNS Forwarding - надеждни решения в сушопътен, въздушен и морски транспорт. Контакти и услужни услуги." />
 <style>
-body {margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f6f6fb;scroll-behavior:smooth;}
-header {position:fixed;top:0;width:100%;background:linear-gradient(90deg,#ff7eb3 0%,#6e8efb 100%);color:#fff;padding:1em 2em;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
-header h1{margin:0;font-size:1.5em;}
-nav a{color:#fff;text-decoration:none;margin-left:2em;font-weight:bold;transition:0.3s;}
-nav a:hover{text-decoration:underline;}
-.language-switch{background:#fff;color:#2563eb;border:none;border-radius:6px;padding:0.3em 0.8em;font-weight:bold;cursor:pointer;margin-left:1em;}
-section{padding:6em 2em 3em 2em;text-align:center;}
-.hero{background:url('https://images.unsplash.com/photo-1590080872247-49e6b0fa98c4?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;height:90vh;color:#fff;display:flex;justify-content:center;align-items:center;flex-direction:column;text-shadow:1px 1px 6px #000;}
-.hero h2{font-size:3em;margin:0.5em 0;}
-.hero p{font-size:1.3em;max-width:700px;margin:0 auto 1.5em;}
-.btn-primary{background:#3b82f6;color:#fff;padding:0.7em 2em;border-radius:8px;text-decoration:none;font-weight:bold;transition:0.3s;}
-.btn-primary:hover{background:#2563eb;}
-.team-cards,.services-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5em;margin-top:2em;}
-.card{background:#fff;border-radius:12px;padding:1.5em;text-align:center;max-width:260px;box-shadow:0 2px 12px rgba(0,0,0,0.1);transition:transform 0.2s;}
-.card:hover{transform:translateY(-5px);}
-.card img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin-bottom:0.8em;border:3px solid #e94992;}
-.card h4{color:#e94992;margin:0.5em 0 0.3em 0;}
-.card p{color:#444;font-size:1em;}
-.contact-form{max-width:500px;margin:2em auto;background:#f8f8ff;padding:2em;border-radius:12px;box-shadow:0 2px 7px rgba(0,0,0,0.1);}
-.contact-form input,.contact-form textarea{width:100%;margin-bottom:1em;padding:0.6em;border-radius:6px;border:1px solid #b4b4e3;font-size:1em;font-family:inherit;}
-.contact-form button{background:#3b82f6;color:#fff;border:none;border-radius:7px;padding:0.7em 2em;font-size:1.1em;cursor:pointer;font-weight:bold;}
-.contact-form button:hover{background:#2563eb;}
-.contacts p{font-size:1.1em;margin:0.5em 0;}
-footer{background:#3b82f6;color:#fff;text-align:center;padding:1.5em 0;margin-top:2em;}
-.hidden{display:none;}
-@media(max-width:900px){.team-cards,.services-cards{flex-direction:column;align-items:center;}header{flex-direction:column;gap:1em;}}
+  :root{
+    --accent1:#e94992;
+    --accent2:#3b82f6;
+    --bg:#f6f6fb;
+    --card:#ffffff;
+    --header-h:72px;
+  }
+  html{scroll-behavior:smooth; scroll-padding-top:90px;}
+  body {
+    margin:0;
+    font-family:'Segoe UI',Arial,sans-serif;
+    background:var(--bg);
+    color:#222;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* HEADER */
+  header {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:var(--header-h);
+    background:linear-gradient(90deg,#ff7eb3 0%,#6e8efb 100%);
+    color:#fff;
+    padding:0 1.25rem;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+  }
+  header h1{margin:0;font-size:1.1rem;letter-spacing:0.6px}
+  nav a{color:#fff;text-decoration:none;margin-left:1rem;font-weight:700;transition:all .2s}
+  nav a:hover{text-decoration:underline;opacity:0.95}
+  .language-switch{background:#fff;color:var(--accent2);border:none;border-radius:6px;padding:0.35em .8em;font-weight:700;cursor:pointer;margin-left:1rem}
+
+  /* MAIN SECTIONS */
+  main{padding-top:calc(var(--header-h) + 16px);}
+  section{padding:3.5rem 1.25rem;text-align:center}
+  section h2{margin:0 0 0.6rem;font-size:1.6rem;color:#1f2937}
+
+  /* HERO */
+  .hero {
+    position:relative;
+    min-height:75vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    color:#fff;
+    text-align:center;
+    background-image: url('https://images.unsplash.com/photo-1590080872247-49e6b0fa98c4?auto=format&fit=crop&w=1950&q=80');
+    background-size:cover;
+    background-position:center;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+    z-index:0;
+  }
+  .hero .hero-inner{position:relative;z-index:1;max-width:1100px;padding:1rem}
+  .hero h2{font-size:2.4rem;margin-bottom:0.4rem;text-shadow:0 6px 20px rgba(0,0,0,0.45)}
+  .hero p{font-size:1.05rem;max-width:820px;margin:0 auto 1rem;color:rgba(255,255,255,0.95);text-shadow:0 4px 18px rgba(0,0,0,0.35)}
+  .btn-primary{background:var(--accent2);color:#fff;padding:.8rem 1.6rem;border-radius:10px;text-decoration:none;font-weight:800;display:inline-block}
+  .btn-primary:hover{background:#2563eb}
+
+  /* CARDS */
+  .cards{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1.2rem}
+  .card{background:var(--card);border-radius:12px;padding:1.25rem;text-align:left;max-width:300px;box-shadow:0 6px 20px rgba(15,23,36,0.06);transition:transform .18s}
+  .card:hover{transform:translateY(-6px)}
+  .card img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--accent1);display:block;margin-bottom:.6rem}
+  .card h4{margin:.35rem 0;color:var(--accent1);font-size:1rem}
+  .card p{margin:0;font-size:.95rem;color:#374151}
+
+  /* SERVICES TABLE */
+  .services-table{max-width:860px;margin:1rem auto 0;border-collapse:collapse;width:95%;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 6px 24px rgba(15,23,36,0.06)}
+  .services-table table{width:100%;border-collapse:collapse}
+  .services-table thead{background:linear-gradient(90deg,#eef2ff,#fef2f2)}
+  .services-table th, .services-table td{padding:.9rem 1rem;text-align:left;border-bottom:1px solid #f1f5f9}
+  .services-table th{font-weight:800;color:#0f1724}
+  .services-table tr:last-child td{border-bottom:none}
+
+  /* CONTACT FORM */
+  .contact-wrap{max-width:720px;margin:1rem auto 0;text-align:left}
+  .contact-form{background:#fff;padding:1.25rem;border-radius:10px;box-shadow:0 8px 30px rgba(15,23,36,0.06)}
+  .contact-form label{display:block;margin:.45rem 0 .2rem;font-weight:700;color:#0f1724}
+  .contact-form input,.contact-form textarea{width:100%;padding:.7rem;border-radius:8px;border:1px solid #e6e9f2;font-size:1rem;font-family:inherit}
+  .contact-form textarea{min-height:140px;resize:vertical}
+  .contact-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin-top:.6rem}
+  .contact-form button{background:var(--accent2);color:#fff;border:none;padding:.65rem 1rem;border-radius:8px;font-weight:800;cursor:pointer}
+  .contact-form button:hover{background:#2563eb}
+  .contacts p{margin:.35rem 0;font-size:1rem;color:#1f2937}
+
+  /* FOOTER */
+  footer{background:var(--accent2);color:#fff;text-align:center;padding:1.2rem;margin-top:2rem}
+
+  /* UTIL */
+  .hidden{display:none}
+  @media (max-width:900px){
+    .cards{flex-direction:column;align-items:center}
+    header{flex-direction:column;gap:.5rem;height:auto;padding:.6rem 1rem}
+    html{scroll-padding-top:120px}
+  }
+  @media (max-width:520px){
+    .hero h2{font-size:1.6rem}
+    .hero p{font-size:.95rem}
+  }
 </style>
 </head>
 <body>
 
 <header>
-<h1>GNS FORWARDING 231016</h1>
-<div>
-<nav>
-<a href="#hero">Начало</a>
-<a href="#about">За нас</a>
-<a href="#services">Услуги</a>
-<a href="#contact">Контакти</a>
-</nav>
-<button class="language-switch" id="langSwitch">EN</button>
-</div>
+  <h1>GNS FORWARDING 231016</h1>
+  <div style="display:flex;align-items:center;gap:.5rem">
+    <nav aria-label="Главно меню">
+      <a href="#hero">Начало</a>
+      <a href="#about">За нас</a>
+      <a href="#services">Услуги</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <button class="language-switch" id="langSwitch" aria-pressed="false">EN</button>
+  </div>
 </header>
 
-<!-- Начало -->
-<section class="hero lang-bg" id="hero">
-<h2>Вашият надежден партньор в транспорта</h2>
-<p>Ефективни решения по суша, въздух, море и железница. Надеждност и професионализъм.</p>
-<a href="#contact" class="btn-primary">Свържете се с нас</a>
-</section>
+<main>
 
-<section class="hero lang-en hidden" id="hero-en">
-<h2>Your Reliable Transport Partner</h2>
-<p>Efficient solutions by land, air, sea, and rail. Reliability and professionalism.</p>
-<a href="#contact" class="btn-primary">Contact Us</a>
-</section>
+  <!-- HERO -->
+  <section class="hero lang-bg" id="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <h2 id="hero-title">Вашият надежден партньор в транспорта</h2>
+      <p>Ефективни решения по суша, въздух, море и железница. Надеждност и професионализъм.</p>
+      <a class="btn-primary" href="#contact">Свържете се с нас</a>
+    </div>
+  </section>
 
-<!-- За нас / Екип -->
-<section id="about">
-<h2 class="lang-bg">Нашият екип</h2>
-<h2 class="lang-en hidden">Our Team</h2>
-<div class="team-cards">
-<!-- General Manager -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="General Manager">
-<h4 class="lang-bg">General Manager</h4>
-<h4 class="lang-en hidden">General Manager</h4>
-<p class="lang-bg">15 години опит в международната спедиция.</p>
-<p class="lang-en hidden">15 years of experience in international forwarding.</p>
-<p>✉️ <a href="mailto:gm@gs-forwarding.com">gm@gs-forwarding.com</a></p>
-<p>📞 +359 888 111 111</p>
-</div>
-<!-- Airfreight Manager -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Airfreight Manager">
-<h4 class="lang-bg">Airfreight Manager</h4>
-<h4 class="lang-en hidden">Airfreight Manager</h4>
-<p class="lang-bg">10 години опит във въздушния транспорт и експресни доставки.</p>
-<p class="lang-en hidden">10 years experience in air freight and express deliveries.</p>
-<p>✉️ <a href="mailto:air@gs-forwarding.com">air@gs-forwarding.com</a></p>
-<p>📞 +359 888 222 222</p>
-</div>
-<!-- Seafreight Manager -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Seafreight Manager">
-<h4 class="lang-bg">Seafreight Manager</h4>
-<h4 class="lang-en hidden">Seafreight Manager</h4>
-<p class="lang-bg">12 години опит в морски превози и контейнерна логистика.</p>
-<p class="lang-en hidden">12 years experience in sea freight and container logistics.</p>
-<p>✉️ <a href="mailto:sea@gs-forwarding.com">sea@gs-forwarding.com</a></p>
-<p>📞 +359 888 333 333</p>
-</div>
-<!-- Road Manager -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Road Manager">
-<h4 class="lang-bg">Road Manager</h4>
-<h4 class="lang-en hidden">Road Manager</h4>
-<p class="lang-bg">13 години опит в автомобилния транспорт и гружански услуги.</p>
-<p class="lang-en hidden">13 years experience in road transport and cargo services.</p>
-<p>✉️ <a href="mailto:road@gs-forwarding.com">road@gs-forwarding.com</a></p>
-<p>📞 +359 888 444 444</p>
-</div>
-<!-- Chief Accountant -->
-<div class="card">
-<img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Chief Accountant">
-<h4 class="lang-bg">Главен Счетоводител</h4>
-<h4 class="lang-en hidden">Chief Accountant</h4>
-<p class="lang-bg">10 години опит във финансовото управление на спедиторски компании.</p>
-<p class="lang-en hidden">10 years experience in financial management of forwarding companies.</p>
-<p>✉️ <a href="mailto:accounting@gs-forwarding.com">accounting@gs-forwarding.com</a></p>
-<p>📞 +359 888 555 555</p>
-</div>
-</div>
-</section>
+  <section class="hero lang-en hidden" id="hero-en" aria-hidden="true">
+    <div class="hero-inner">
+      <h2>Your Reliable Transport Partner</h2>
+      <p>Efficient solutions by land, air, sea, and rail. Reliability and professionalism.</p>
+      <a class="btn-primary" href="#contact">Contact Us</a>
+    </div>
+  </section>
 
-<!-- Услуги -->
-<section id="services">
-<h2 class="lang-bg">Нашите услуги</h2>
-<h2 class="lang-en hidden">Our Services</h2>
-<div class="services-cards">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581090700227-f369a8b46e2c?auto=format&fit=crop&w=80&q=80" alt="Road Transport">
-<h4 class="lang-bg">Сухопътен транспорт</h4>
-<h4 class="lang-en hidden">Road Transport</h4>
-<p class="lang-bg">Надежден превоз на товари с камиони и автомобилен транспорт.</p>
-<p class="lang-en hidden">Reliable transport of goods by trucks and vehicles.</p>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1578496473423-994e2eab7fa6?auto=format&fit=crop&w=80&q=80" alt="Air Freight">
-<h4 class="lang-bg">Въздушен транспорт</h4>
-<h4 class="lang-en hidden">Air Freight</h4>
-<p class="lang-bg">Бързи и сигурни международни и експресни доставки.</p>
-<p class="lang-en hidden">Fast and secure international and express deliveries.</p>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581091012184-8ecf75c9c8bb?auto=format&fit=crop&w=80&q=80" alt="Sea Freight">
-<h4 class="lang-bg">Морски транспорт</h4>
-<h4 class="lang-en hidden">Sea Freight</h4>
-<p class="lang-bg">Контейнерни и големи товари с опитни партньори.</p>
-<p class="lang-en hidden">Container and large cargo with experienced partners.</p>
-</div>
-</div>
-</section>
+  <!-- ABOUT / TEAM -->
+  <section id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="lang-bg">Нашият екип</h2>
+    <h2 class="lang-en hidden">Our Team</h2>
 
-<!-- Контакти -->
-<section id="contact">
-<h2 class="lang-bg">Контакти</h2>
-<h2 class="lang-en hidden">Contacts</h2>
-<div class="contacts">
-<p>📞 +359 889 999 999</p>
-<p>✉️ info@gs-forwarding.com</p>
-<p>📍 Адрес на фирмата: 231016 G. Stoilov</p>
-</div>
-<form id="contactForm" class="contact-form">
-<label class="lang-bg" for="name">Име</label>
-<label class="lang-en hidden" for="name">Name</label>
-<input type="text" id="name" name="Име" required>
-<label class="lang-bg" for="email">Имейл</label>
-<label class="lang-en hidden" for="email">Email</label>
-<input type="email" id="email" name="Имейл" required>
-<label class="lang-bg" for="phone">Телефон</label>
-<label class="lang-en hidden" for="phone">Phone</label>
-<input type="tel" id="phone" name="Телефон">
-<label class="lang-bg" for="message">Съобщение</label>
-<label class="lang-en hidden" for="message">Message</label>
-<textarea id="message" name="Съобщение" required></textarea>
-<button type="submit">Изпрати</button>
-<p id="successMessage" style="display:none;color:green;margin-top:1em;">✅ <span class="lang-bg">Успешно изпратено!</span><span class="lang-en hidden">Successfully sent!</span></p>
-</form>
-</section>
+    <div class="cards team-cards" role="list">
+      <!-- card examples -->
+      <div class="card" role="listitem">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="General Manager photo" />
+        <h4 class="lang-bg">Генерален Мениджър</h4>
+        <h4 class="lang-en hidden">General Manager</h4>
+        <p class="lang-bg">15 години опит в международната спедиция.</p>
+        <p class="lang-en hidden">15 years of experience in international forwarding.</p>
+        <p>✉️ <a href="mailto:gm@gs-forwarding.com">gm@gs-forwarding.com</a></p>
+      </div>
 
-<footer>© 2025 Георги Стоилов Спедиция</footer>
+      <div class="card" role="listitem">
+        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Airfreight Manager photo" />
+        <h4 class="lang-bg">Airfreight Manager</h4>
+        <h4 class="lang-en hidden">Airfreight Manager</h4>
+        <p class="lang-bg">10 години опит във въздушния транспорт.</p>
+        <p class="lang-en hidden">10 years experience in air freight.</p>
+        <p>✉️ <a href="mailto:air@gs-forwarding.com">air@gs-forwarding.com</a></p>
+      </div>
+
+      <div class="card" role="listitem">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Seafreight Manager photo" />
+        <h4 class="lang-bg">Seafreight Manager</h4>
+        <h4 class="lang-en hidden">Seafreight Manager</h4>
+        <p class="lang-bg">12 години опит в морски превози.</p>
+        <p class="lang-en hidden">12 years experience in sea freight.</p>
+        <p>✉️ <a href="mailto:sea@gs-forwarding.com">sea@gs-forwarding.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" aria-labelledby="services-title">
+    <h2 id="services-title" class="lang-bg">Нашите услуги</h2>
+    <h2 class="lang-en hidden">Our Services</h2>
+
+    <div class="cards services-cards" aria-hidden="false">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581090700227-f369a8b46e2c?auto=format&fit=crop&w=80&q=80" alt="Road transport icon" />
+        <h4 class="lang-bg">Сухопътен транспорт</h4>
+        <h4 class="lang-en hidden">Road Transport</h4>
+        <p class="lang-bg">Надежден превоз на товари с камиони и автомобилен транспорт.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1578496473423-994e2eab7fa6?auto=format&fit=crop&w=80&q=80" alt="Air freight icon" />
+        <h4 class="lang-bg">Въздушен транспорт</h4>
+        <h4 class="lang-en hidden">Air Freight</h4>
+        <p class="lang-bg">Бързи и сигурни международни и експресни доставки.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581091012184-8ecf75c9c8bb?auto=format&fit=crop&w=80&q=80" alt="Sea freight icon" />
+        <h4 class="lang-bg">Морски транспорт</h4>
+        <h4 class="lang-en hidden">Sea Freight</h4>
+        <p class="lang-bg">Контейнерни и големи товари с опитни партньори.</p>
+      </div>
+    </div>
+
+    <!-- Таблица с примерни услуги/цени -->
+    <div class="services-table" aria-hidden="false" style="margin-top:1.25rem">
+      <table aria-label="Примерни услуги и цени">
+        <thead>
+          <tr>
+            <th class="lang-bg">Услуга</th>
+            <th class="lang-en hidden">Service</th>
+            <th class="lang-bg">Ориентировъчно време</th>
+            <th class="lang-bg">Цена (BGN)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="lang-bg">Вътрешно почистване (автобус)</td>
+            <td class="lang-en hidden">Interior cleaning (bus)</td>
+            <td>60–90 мин</td>
+            <td>120</td>
+          </tr>
+          <tr>
+            <td class="lang-bg">Пране на тапицерии (на място)</td>
+            <td class="lang-en hidden">Seat upholstery cleaning</td>
+            <td>5–15 мин/седалка</td>
+            <td>8–20 / седалка</td>
+          </tr>
+          <tr>
+            <td class="lang-bg">Дезинфекция (пълна)</td>
+            <td class="lang-en hidden">Full disinfection</td>
+            <td>30–60 мин</td>
+            <td>80</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="lang-bg">Контакти</h2>
+    <h2 class="lang-en hidden">Contacts</h2>
+
+    <div class="contact-wrap">
+      <div class="contacts" style="margin-bottom:1rem">
+        <p>📞 <strong>+359 889 999 999</strong></p>
+        <p>✉️ <a href="mailto:info@gs-forwarding.com">info@gs-forwarding.com</a></p>
+        <p>📍 Адрес: 231016 G. Stoilov</p>
+      </div>
+
+      <!-- Ако искаш формата да праща имейл: добави action на form към Formspree или друг service -->
+      <form id="contactForm" class="contact-form" aria-label="Форма за контакт">
+        <label class="lang-bg" for="name">Име</label>
+        <label class="lang-en hidden" for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label class="lang-bg" for="email">Имейл</label>
+        <label class="lang-en hidden" for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label class="lang-bg" for="message">Съобщение</label>
+        <label class="lang-en hidden" for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <div class="contact-actions">
+          <button type="submit">Изпрати</button>
+          <p id="successMessage" style="display:none;color:green;margin:0 .5rem">✅ <span class="lang-bg">Успешно изпратено!</span><span class="lang-en hidden">Successfully sent!</span></p>
+        </div>
+        <p class="small" style="font-size:.85rem;color:#6b7280;margin-top:.6rem">Забележка: демонстрационна форма — при нужда ще добавя Formspree за изпращане по имейл.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2025 GNS FORWARDING — Всички права запазени</footer>
 
 <script>
-// Смена на езика
-const switchBtn = document.getElementById('langSwitch');
-switchBtn.addEventListener('click', () => {
+  // Езиков ключ
+  const switchBtn = document.getElementById('langSwitch');
+  switchBtn.addEventListener('click', () => {
     document.querySelectorAll('.lang-bg').forEach(el => el.classList.toggle('hidden'));
     document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden'));
+    // обновяване aria-hidden за секциите hero
+    document.querySelectorAll('[id$="-en"]').forEach(el => {
+      el.setAttribute('aria-hidden', !el.classList.contains('hidden'));
+    });
     switchBtn.textContent = switchBtn.textContent === 'EN' ? 'BG' : 'EN';
-});
+    // пресети aria-pressed
+    const pressed = switchBtn.getAttribute('aria-pressed') === 'true';
+    switchBtn.setAttribute('aria-pressed', String(!pressed));
+  });
 
-// Контактна форма
-const form=document.getElementById('contactForm');
-const successMsg=document.getElementById('successMessage');
-form.addEventListener('submit',function(e){
+  // Контактна форма (демо)
+  const form = document.getElementById('contactForm');
+  const successMsg = document.getElementById('successMessage');
+  form.addEventListener('submit', function(e){
     e.preventDefault();
-    successMsg.style.display='block';
+    // проста клиентска валидация (HTML5 вече прави базова валидация)
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if(!name || !email || !message){
+      alert('Моля попълнете всички задължителни полета.');
+      return;
+    }
+    // Покажи успех
+    successMsg.style.display = 'inline-block';
     form.reset();
-    setTimeout(()=>{successMsg.style.display='none';},3000);
-});
+    setTimeout(()=> successMsg.style.display = 'none', 3500);
+  });
+
+  // Корекция на скрол ако някой кликне на anchor (осигурява видимост при фиксиран header)
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      const targetId = a.getAttribute('href').substring(1);
+      const el = document.getElementById(targetId);
+      if(el){
+        e.preventDefault();
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 80; // offset
+        window.scrollTo({top, behavior:'smooth'});
+      }
+    });
+  });
 </script>
 
 </body>
